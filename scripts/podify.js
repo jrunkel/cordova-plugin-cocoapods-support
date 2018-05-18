@@ -231,7 +231,7 @@ module.exports = function (context) {
           File.basename filename, extension
           end
           frameworkNames.each do |name|
-          puts 'Removing #{name} from OTHER_LDFLAGS'
+          puts "Removing #{name} from OTHER_LDFLAGS"
           config_file.frameworks.delete(name)
           end
           end

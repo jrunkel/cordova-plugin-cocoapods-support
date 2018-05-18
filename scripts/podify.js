@@ -179,9 +179,9 @@ module.exports = function (context) {
 
         podfileContents.push(entry);
       }
+      podfileContents.push(getPostInstallScript());
       podfileContents.push('end');
 
-      podfileContents.push(getPostInstallScript());
 
       fs.writeFileSync('platforms/ios/Podfile', podfileContents.join('\n'));
 

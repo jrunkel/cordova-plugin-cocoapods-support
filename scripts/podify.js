@@ -179,8 +179,9 @@ module.exports = function (context) {
 
         podfileContents.push(entry);
       }
-      podfileContents.push(getPostInstallScript());
       podfileContents.push('end');
+
+      podfileContents.push(getPostInstallScript());
 
 
       fs.writeFileSync('platforms/ios/Podfile', podfileContents.join('\n'));
@@ -237,6 +238,7 @@ module.exports = function (context) {
           end
           xcconfig_path = aggregate_target.xcconfig_path(config_name)
           config_file.save_as(xcconfig_path)
+          end
           end
           end
           end
